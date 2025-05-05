@@ -30,8 +30,8 @@ while True:
             "timestamp": datetime.utcnow().isoformat()
         }
         producer.send("open-meteo-weather", value=payload)
-        print("📤 Weather:", payload)
+        print("Weather:", payload)
         time.sleep(60)  # frecuencia de actualización
     except Exception as e:
-        print("❌ Erro:", e)
+        print("Erro:", e)
         time.sleep(20)
